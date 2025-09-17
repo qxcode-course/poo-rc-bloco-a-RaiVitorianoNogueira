@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-17_14-43-16",
+            "content": "\n\n\n\nclass Towel:\n    def __init__(self, color: str, size: str):\n        self.color: str = \"\" #atributo\n        self.size: str = \"\"\n        self.wetness: int = 0\n\n\n# referencias\nminha: Towel = Towel(\"blue\", \"P\")\nminha.color = \"blue\"\nminha.size = \"G\"\n\n\nesposa = Towel(\"red\", \"G\")\nesposa.color = \"red\"\nesposa.size = \"G\"\n\ngaiato = esposa\n\n\n\nprint(\"Qual a cor da sua toalha\")\ncolor = input()\ntowel: Towel = Towel(color, \"P\")\nprint(towel.color)\n\n\n\n",
+            "lines": "32"
+        }
+    ]
+}
