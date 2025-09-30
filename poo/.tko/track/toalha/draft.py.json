@@ -12,8 +12,23 @@
         },
         {
             "label": "2025-09-23_13-56-08",
-            "content": "\n\n\n\nclass Towel:\n    def __init__(self, color: str , size: str):\n        self.color: str = color #atributo\n        self.size: str = size\n        self.wetness: int = 0\n\n\n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n\n        if self.wetness >= self.isMaxWetness():\n            self.wetness = self.isMaxWetness()\n            print(\"Toalha molhada\")\n    def isMaxWetness(self) -> int:\n        if self.size == \"P\": # early return\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0 # default return\n\n    def __str__(self) -> str: # toString\n        return f\"Color:{self.color}, Size:{self.size}, Wet:{self.wetness}\"\n\n\n\n\ndef main():    \n    towel: Towel = Towel(\"\", \"\")\n    while True:\n        line: str = input()\n        args: list[str] = line.split(\" \")\n        \n        if args[0] == \"end\":\n            break\n        elif args[0] == \"new\":\n            color = args[1]\n            size = args[2]\n            towel = Towel(color, size)\n        elif args[0] == \"show\":\n            print(towel)\n\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\n\nmain()\n\n\n# referencias\n#minha: Towel = Towel(\"blue\", \"P\")\n#minha.color = \"blue\"\n#minha.size = \"G\"\n\n\n#esposa = Towel(\"red\", \"G\")\n#esposa.color = \"red\"\n#esposa.size = \"G\"\n\n#gaiato = esposa\n\n\n\n#print(\"Qual a cor da sua toalha\")\n#color = input()\n#towel: Towel = Towel(color, \"P\")\n#print(f\"Sua toalha \u00e9 {towel.color}\")\n\n\n\n",
+            "content": "@@ -1,13 +1,12 @@\n %0A%0A%0A%0A\n-#\n class To\n@@ -962,21 +962,16 @@\n    color\n-: str\n  = args%5B\n@@ -989,21 +989,16 @@\n     size\n-: str\n  = args%5B\n@@ -1036,23 +1036,15 @@\n lor,\n+ \n size)%0A\n-        %0A\n     \n@@ -1064,19 +1064,20 @@\n %5B0%5D == %22\n-dry\n+show\n %22:%0A     \n@@ -1083,16 +1083,28 @@\n         \n+print(towel)\n %0A%0A      \n",
             "lines": "74"
+        },
+        {
+            "label": "2025-09-30_13-35-52",
+            "content": "@@ -1,12 +1,13 @@\n %0A%0A%0A%0A\n+#\n class To\n@@ -1093,77 +1093,8 @@\n y%22:%0A\n-            amount: int = int(args%5B1%5D)%0A            towel.dry(amount)%0A\n     \n",
+            "lines": "75"
+        },
+        {
+            "label": "2025-09-30_13-45-27",
+            "content": "@@ -1161,65 +1161,8 @@\n nt)%0A\n-        elif args%5B0%5D == %22show%22:%0A            print(towel)%0A\n     \n",
+            "lines": "77"
+        },
+        {
+            "label": "2025-09-30_13-46-58",
+            "content": "\n\n\n\nclass Towel:\n    def __init__(self, color: str , size: str):\n        self.color: str = color #atributo\n        self.size: str = size\n        self.wetness: int = 0\n\n\n    def dry(self, amount: int) -> None:\n        self.wetness += amount\n\n        if self.wetness >= self.isMaxWetness():\n            self.wetness = self.isMaxWetness()\n            print(\"Toalha molhada\")\n    def isMaxWetness(self) -> int:\n        if self.size == \"P\": # early return\n            return 10\n        if self.size == \"M\":\n            return 20\n        if self.size == \"G\":\n            return 30\n        return 0 # default return\n\n    def __str__(self) -> str: # toString\n        return f\"Color:{self.color}, Size:{self.size}, Wet:{self.wetness}\"\n\n\n\n\ndef main():    \n    towel: Towel = Towel(\"\", \"\")\n    while True:\n        line: str = input()\n        args: list[str] = line.split(\" \")\n        \n        if args[0] == \"end\":\n            break\n        elif args[0] == \"new\":\n            color: str = args[1]\n            size: str = args[2]\n            towel = Towel(color,size)\n        \n        elif args[0] == \"dry\":\n            amount: int = int(args[1])\n            towel.dry(amount)\n        elif args[0] == \"show\":\n            print(towel)\n            \n\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\n\nmain()\n\n\n# referencias\n#minha: Towel = Towel(\"blue\", \"P\")\n#minha.color = \"blue\"\n#minha.size = \"G\"\n\n\n#esposa = Towel(\"red\", \"G\")\n#esposa.color = \"red\"\n#esposa.size = \"G\"\n\n#gaiato = esposa\n\n\n\n#print(\"Qual a cor da sua toalha\")\n#color = input()\n#towel: Towel = Towel(color, \"P\")\n#print(f\"Sua toalha \u00e9 {towel.color}\")\n\n\n\n",
+            "lines": "79"
         }
     ]
 }

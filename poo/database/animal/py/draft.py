@@ -4,8 +4,18 @@ class Animal:
         self.sound: str = sound
         self.age: int = 0
 
-    def life():
-
+    def __str__(self) -> str:
+        return f"{self.species}:{self.age}:{self.sound}"
+    
+    def grow(self, i:init) -> None:
+        if self.age >= 4:
+            print(f"warning: {self.species} morreu ")
+            return
+        self.age  += i
+        if self.age >= 4:
+            self.age = 4
+            print(f"warning: {self.species}")
+    
 
 
 
@@ -44,16 +54,14 @@ def main():
             animal = Animal(species, sound)
         elif args[0] ==  "show":
             print(animal)
+        elif args[0] == "grow":
+            i: int = int(args[1])
+            animal.grow(i)
+        elif args[0] == "noise":
+            print(animal.makeSound())
 
-
-
-
-
-
-
-
-
-
+        else:
+            print("fail: comando não encontrado")
 
 
 

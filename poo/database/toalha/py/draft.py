@@ -2,7 +2,7 @@
 
 
 
-#class Towel:
+class Towel:
     def __init__(self, color: str , size: str):
         self.color: str = color #atributo
         self.size: str = size
@@ -44,6 +44,10 @@ def main():
             towel = Towel(color,size)
         
         elif args[0] == "dry":
+            amount: int = int(args[1])
+            towel.dry(amount)
+        elif args[0] == "show":
+            print(towel)
             
 
         else:

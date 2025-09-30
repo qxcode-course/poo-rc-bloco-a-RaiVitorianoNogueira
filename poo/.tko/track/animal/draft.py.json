@@ -1,0 +1,9 @@
+{
+    "patches": [
+        {
+            "label": "2025-09-30_13-55-31",
+            "content": "class Animal:\n    def __init__(self, species: str, sound: str, age: int):\n        self.species: str = species\n        self.sound: str = sound\n        self.age: int = 0\n\n    def life():\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n    \n    animal: Animal = Animal(\"\", \"\")\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            species: str = args[1]\n            sound: str = args[2]\n            animal = Animal(species, sound)\n        elif args[0] ==  \"show\":\n            print(animal)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmain()",
+            "lines": "63"
+        }
+    ]
+}
