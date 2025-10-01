@@ -9,7 +9,7 @@ class Animal:
     
     def grow(self, i:int) -> None:
         if self.age >= 4:
-            print(f"warning: {self.species} morreu ")
+            print(f"warning: {self.species} morreu")
             return
         self.age  += i
         if self.age >= 4:
