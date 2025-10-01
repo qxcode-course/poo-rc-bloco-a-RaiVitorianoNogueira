@@ -2,8 +2,23 @@
     "patches": [
         {
             "label": "2025-09-30_13-55-31",
-            "content": "class Animal:\n    def __init__(self, species: str, sound: str, age: int):\n        self.species: str = species\n        self.sound: str = sound\n        self.age: int = 0\n\n    def life():\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n    \n    animal: Animal = Animal(\"\", \"\")\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            species: str = args[1]\n            sound: str = args[2]\n            animal = Animal(species, sound)\n        elif args[0] ==  \"show\":\n            print(animal)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nmain()",
+            "content": "@@ -174,522 +174,16 @@\n def \n-__str__(self) -%3E str:%0A        return f%22%7Bself.species%7D:%7Bself.age%7D:%7Bself.sound%7D%22%0A    %0A    def grow(self, i:int) -%3E None:%0A        if self.age %3E= 4:%0A            print(f%22warning: %7Bself.species%7D morreu %22)%0A            return%0A        self.age  += i%0A        if self.age %3E= 4:%0A            self.age = 4%0A            print(f%22warning: %7Bself.species%7D morreu%22)%0A    def makeSound(self) -%3E str:%0A        if self.age == 0:%0A            return %22---%22%0A        if self.age %3E= 4:%0A            return %22RIP%22%0A        return self.sound%0A    %0A    \n+life():%0A\n %0A%0A%0A%0A\n@@ -621,236 +621,17 @@\n al)%0A\n-        elif args%5B0%5D == %22grow%22:%0A            i: int = int(args%5B1%5D)%0A            animal.grow(i)%0A        elif args%5B0%5D == %22noise%22:%0A            print(animal.makeSound())%0A%0A        else:%0A            print(%22fail: comando n%C3%A3o encontrado%22)\n+%0A%0A%0A%0A%0A%0A%0A%0A%0A\n %0A%0A%0A%0A\n",
             "lines": "63"
+        },
+        {
+            "label": "2025-10-01_02-03-50",
+            "content": "@@ -757,18 +757,16 @@\n l(%22%22, %22%22\n-,0\n )%0A    wh\n@@ -1066,10 +1066,8 @@\n ound\n-,0\n )%0A  \n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-10-01_02-06-58",
+            "content": "@@ -64,20 +64,16 @@\n age: int\n- = 0\n ):%0A     \n",
+            "lines": "78"
+        },
+        {
+            "label": "2025-10-01_02-10-35",
+            "content": "class Animal:\n    def __init__(self, species: str, sound: str, age: int = 0):\n        self.species: str = species\n        self.sound: str = sound\n        self.age: int = 0\n\n    def __str__(self) -> str:\n        return f\"{self.species}:{self.age}:{self.sound}\"\n    \n    def grow(self, i:int) -> None:\n        if self.age >= 4:\n            print(f\"warning: {self.species} morreu \")\n            return\n        self.age  += i\n        if self.age >= 4:\n            self.age = 4\n            print(f\"warning: {self.species} morreu\")\n    def makeSound(self) -> str:\n        if self.age == 0:\n            return \"---\"\n        if self.age >= 4:\n            return \"RIP\"\n        return self.sound\n    \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ndef main():\n    \n    animal: Animal = Animal(\"\", \"\",0)\n    while True:\n\n        line: str = input()\n        print(\"$\" + line)\n        args: list[str] = line.split(\" \")\n\n        if args[0] == \"end\":\n            break\n        elif args[0] == \"init\":\n            species: str = args[1]\n            sound: str = args[2]\n            animal = Animal(species, sound,0)\n        elif args[0] ==  \"show\":\n            print(animal)\n        elif args[0] == \"grow\":\n            i: int = int(args[1])\n            animal.grow(i)\n        elif args[0] == \"noise\":\n            print(animal.makeSound())\n\n        else:\n            print(\"fail: comando n\u00e3o encontrado\")\n\n\n\n\n\n\nmain()",
+            "lines": "78"
         }
     ]
 }

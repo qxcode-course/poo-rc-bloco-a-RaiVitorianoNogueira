@@ -1,0 +1,5 @@
+2025-10-01 01:59:42, MOVE, v:1, k:animal, mode:PICK
+2025-10-01 02:03:50, EXEC, v:1, k:animal, mode:FREE, size:78
+2025-10-01 02:06:58, EXEC, v:1, k:animal, mode:FREE, size:78
+2025-10-01 02:08:55, EXEC, v:1, k:animal, mode:FREE
+2025-10-01 02:10:35, EXEC, v:1, k:animal, mode:FREE, size:78
