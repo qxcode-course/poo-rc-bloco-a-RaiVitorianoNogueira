@@ -22,24 +22,6 @@ class Animal:
             return "RIP"
         return self.sound
     
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -69,9 +51,6 @@ def main():
 
         else:
             print("fail: comando não encontrado")
-
-
-
 
 
 
