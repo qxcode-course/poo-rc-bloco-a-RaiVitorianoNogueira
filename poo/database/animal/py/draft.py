@@ -4,6 +4,7 @@ class Animal:
         self.sound: str = sound
         self.age: int = 0
 
+
     def __str__(self) -> str:
         return f"{self.species}:{self.age}:{self.sound}"
     
